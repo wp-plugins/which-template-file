@@ -4,7 +4,7 @@ Plugin Name: which template file
 Description: Show which php file of your theme is used to display the current page.
 Version: 1.3.
 Author: Gilles Dumas
-Author URI: http://siteWebAuteur
+Author URI: http://gillesdumas.com
 
 
 Contributors: gilles66
