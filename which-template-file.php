@@ -2,7 +2,7 @@
 /*
 Plugin Name: which template file
 Description: Show which php file of your theme is used to display the current page in your front office.
-Version: 1.2.
+Version: 1.3.
 Author: Gilles Dumas
 Author URI: http://gillesdumas.com
 */

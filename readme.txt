@@ -2,7 +2,7 @@
 
 Plugin Name: which template file
 Description: Show which php file of your theme is used to display the current page.
-Version: 1.2.
+Version: 1.3.
 Author: Gilles Dumas
 Author URI: http://siteWebAuteur
 
@@ -11,7 +11,7 @@ Contributors: gilles66
 Tags: template, debug, adminbar
 Requires at least: 3.3
 Tested up to: 3.6.1
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
