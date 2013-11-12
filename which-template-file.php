@@ -2,7 +2,7 @@
 /*
 Plugin Name: which template file
 Description: Show which php file of your theme is used to display the current page in your front office.
-Version: 1.2.
+Version: 1.4
 Author: Gilles Dumas
 Author URI: http://gillesdumas.com
 */
@@ -24,7 +24,7 @@ function my_admin_bar_menu($template) {
     $wp_admin_bar->add_menu(
         array(
             'id'      => '_gwp_my_template_file',
-            'title'   => '<span style="color:gold;">Template file : '._GWP_MY_TEMPLATE_FILE.'</span>',
+            'title'   => '<span style="color:gold !important;">Template file : '._GWP_MY_TEMPLATE_FILE.'</span>',
         )
     );
 }
