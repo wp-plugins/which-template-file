@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: which template file
+Plugin Name: Which Template File
 Description: Show which php file of your theme is used to display the current page in your front office.
-Version: 1.4
+Version: 2.0
 Author: Gilles Dumas
 Author URI: http://gillesdumas.com
 */
@@ -12,12 +12,27 @@ Author URI: http://gillesdumas.com
 
 add_filter('template_include', 'my_template_include', 999);
 function my_template_include($template) {
+
     if (is_admin()) return;
-    define('_GWP_MY_TEMPLATE_FILE', ltrim(strrchr($template, '/'), '/'));
+    
+    global $user_ID;
+    
+    if ($user_ID == 0) {
+        return;
+    }
+
+    $userdatas = get_userdata($user_ID);
+    if (isset($userdatas->roles) && (is_array($userdatas->roles)) ) {
+        if (in_array('administrator', $userdatas->roles)) {
+            define('_GWP_MY_TEMPLATE_FILE', ltrim(strrchr($template, '/'), '/'));
+            add_filter('admin_bar_menu', 'my_admin_bar_menu', 999);            
+        }
+    }
+    
     return $template;
 }
 
-add_filter('admin_bar_menu', 'my_admin_bar_menu', 999);
+
 function my_admin_bar_menu($template) {
     if (is_admin()) return;
     global $wp_admin_bar;
@@ -31,3 +46,4 @@ function my_admin_bar_menu($template) {
 
 
 
+ 
