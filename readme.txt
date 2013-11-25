@@ -2,7 +2,7 @@
 
 Plugin Name: which template file
 Description: Show which php file of your theme is used to display the current page.
-Version: 2.0
+Version: 2.1
 Author: Gilles Dumas
 Author URI: http://gillesdumas.com
 
@@ -11,7 +11,7 @@ Contributors: gilles66
 Tags: template, debug, adminbar
 Requires at least: 3.3
 Tested up to: 3.7.1
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Just usefull if you are a WordPress theme developer.
 
 
 == Changelog ==
+
+= 2.1 =
+* Fixing a bug for non admin
 
 = 2.0 =
 * Now the template name is shown in the admin bar just for the admin

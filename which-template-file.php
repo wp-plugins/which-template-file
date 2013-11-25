@@ -2,7 +2,7 @@
 /*
 Plugin Name: Which Template File
 Description: Show which php file of your theme is used to display the current page in your front office.
-Version: 2.0
+Version: 2.1
 Author: Gilles Dumas
 Author URI: http://gillesdumas.com
 */
@@ -18,7 +18,7 @@ function my_template_include($template) {
     global $user_ID;
     
     if ($user_ID == 0) {
-        return;
+        return $template;
     }
 
     $userdatas = get_userdata($user_ID);
